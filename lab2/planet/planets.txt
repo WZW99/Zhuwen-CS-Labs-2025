@@ -1,0 +1,4 @@
+3
+Earth 1 1 1
+saturnosaturnito 666 1 29
+Mars 1555 0 2

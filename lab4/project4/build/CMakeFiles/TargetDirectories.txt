@@ -1,0 +1,3 @@
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab4/project4/build/CMakeFiles/lab4.dir
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab4/project4/build/CMakeFiles/edit_cache.dir
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab4/project4/build/CMakeFiles/rebuild_cache.dir

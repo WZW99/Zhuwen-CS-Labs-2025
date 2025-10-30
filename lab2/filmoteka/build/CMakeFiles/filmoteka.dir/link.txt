@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfilmoteka.a CMakeFiles/filmoteka.dir/filmoteka.cpp.o
+/usr/bin/ranlib libfilmoteka.a

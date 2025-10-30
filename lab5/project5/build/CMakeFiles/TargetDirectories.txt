@@ -1,0 +1,3 @@
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab5/project5/build/CMakeFiles/collections_executable.dir
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab5/project5/build/CMakeFiles/edit_cache.dir
+/home/zhuwen/Zhuwen-CS-Labs-2025/lab5/project5/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab2.dir/main.cpp.o -o lab2  /home/zhuwen/Zhuwen-CS-Labs-2025/lab2/filmoteka/build/libfilmoteka.a /home/zhuwen/Zhuwen-CS-Labs-2025/lab2/planet/build/libplanet.a 
