@@ -1,3 +1,0 @@
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab3/fraction/build/CMakeFiles/fraction.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab3/fraction/build/CMakeFiles/edit_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab3/fraction/build/CMakeFiles/rebuild_cache.dir

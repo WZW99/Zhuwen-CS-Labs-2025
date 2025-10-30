@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/lab_7.dir/Main.cpp.o CMakeFiles/lab_7.dir/Handler.cpp.o -o lab_7  Persons/libPersons.a 

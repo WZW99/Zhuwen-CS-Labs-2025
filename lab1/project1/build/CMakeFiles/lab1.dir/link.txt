@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/lab1.dir/main.cpp.o -o lab1  /home/zhuwen/Zhuwen-CS-Labs-2025/lab1/MathLib/build/libmymath.a 

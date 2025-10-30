@@ -1,6 +1,0 @@
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/CMakeFiles/lab_6.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/CMakeFiles/edit_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/CMakeFiles/rebuild_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/Polynomial/CMakeFiles/Polynomial.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/Polynomial/CMakeFiles/edit_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab6/build/Polynomial/CMakeFiles/rebuild_cache.dir

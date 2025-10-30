@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/collections_executable.dir/main.cpp.o -o collections_executable 

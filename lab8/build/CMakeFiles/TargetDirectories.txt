@@ -1,7 +1,0 @@
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/CMakeFiles/lab_8.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/CMakeFiles/clang-format.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/CMakeFiles/edit_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/CMakeFiles/rebuild_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/Tasks/CMakeFiles/Tasks.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/Tasks/CMakeFiles/edit_cache.dir
-/home/zhuwen/Zhuwen-CS-Labs-2025/lab8/build/Tasks/CMakeFiles/rebuild_cache.dir

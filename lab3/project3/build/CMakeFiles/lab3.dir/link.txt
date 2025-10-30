@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/lab3.dir/main.cpp.o -o lab3  /home/zhuwen/Zhuwen-CS-Labs-2025/lab3/fraction/build/libfraction.a 
