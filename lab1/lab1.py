@@ -1,74 +1,115 @@
 import sys
 import math
 
-
-def get_coef(index, prompt):
-    try:
-        # Пробуем прочитать коэффициент из командной строки
-        coef_str = sys.argv[index]
-    except:
-        # Вводим с клавиатуры
-        print(prompt)
-        coef_str = input()
-    flag = False
-    # Проверка на число
-    while (flag == False):
+def get_coefficient(input_prompt):
+    """Функция для безопасного ввода коэффициента с проверкой на корректность."""
+    while True:
         try:
-            # Пробуем перевести строку в действительное число
-            coef = float(coef_str)
-        except:
-            # При ошибке просим повторить ввод коэффициента
-            print(prompt)
-            coef_str = input()
-        else:
-            flag = True
-    return coef
+            value = float(input(input_prompt))
+            return value
+        except ValueError:
+            print("Ошибка: введите действительное число.")
 
+def get_coefficients_from_keyboard():
+    """Функция для ввода всех коэффициентов с клавиатуры."""
+    print("Введите коэффициенты A, B, C для уравнения A*x^4 + B*x^2 + C = 0:")
+    a = get_coefficient("A = ")
+    b = get_coefficient("B = ")
+    c = get_coefficient("C = ")
+    return a, b, c
 
-def get_roots(a, b, c):
-    result = []
-    D = b * b - 4 * a * c
-    if D == 0.0:
-        root = -b / (2.0 * a)
-        result.append(root)
-    elif D > 0.0:
-        sqD = math.sqrt(D)
-        quadratic1 = (-b + sqD) / (2.0 * a)
-        quadratic2 = (-b - sqD) / (2.0 * a)
-        # y = x^2 проверяем игрек на положительность
-        if (quadratic1 >= 0):
-            root1 = math.sqrt(quadratic1)
-            root2 = -root1
-            result.append(root1)
-            if (root1 != root2):
-                result.append(root2)
-        if (quadratic2 >= 0):
-            root3 = math.sqrt(quadratic2)
-            root4 = -root3
-            result.append(root3)
-            if (root3 != root4):
-                result.append(root4)
-    return result
+def parse_command_line_arguments():
+    """Функция для парсинга параметров командной строки."""
+    coefficients = []
+    if len(sys.argv) == 4:
+        for arg in sys.argv[1:]:
+            try:
+                coefficients.append(float(arg))
+            except ValueError:
+                print(f"Неверный параметр: {arg}. Будет запрошен ввод с клавиатуры.")
+                return None
+        return coefficients
+    return None
 
+def validate_coefficient_a(a):
+    """Функция для проверки коэффициента A."""
+    if a == 0:
+        print("Ошибка: коэффициент A не может быть нулем.")
+        return False
+    return True
+
+def calculate_discriminant(a, b, c):
+    """Функция для вычисления дискриминанта."""
+    return b**2 - 4*a*c
+
+def solve_quadratic(a, b, c):
+    """Функция для решения квадратного уравнения a*y^2 + b*y + c = 0."""
+    discriminant = calculate_discriminant(a, b, c)
+
+    if discriminant < 0:
+        return []  # Нет действительных корней
+    elif discriminant == 0:
+        y = -b / (2 * a)
+        return [y]
+    else:
+        y1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        y2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        return [y1, y2]
+
+def get_real_roots_from_quadratic_solutions(quadratic_roots):
+    """Функция для получения действительных корней из решений квадратного уравнения."""
+    roots = []
+    for y in quadratic_roots:
+        if y > 0:
+            root1 = math.sqrt(y)
+            root2 = -math.sqrt(y)
+            roots.extend([root1, root2])
+        elif y == 0:
+            roots.append(0.0)
+    return roots
+
+def solve_biquadratic(a, b, c):
+    """Функция для решения биквадратного уравнения a*x^4 + b*x^2 + c = 0."""
+    # Решаем квадратное уравнение относительно y = x^2
+    quadratic_roots = solve_quadratic(a, b, c)
+
+    # Получаем действительные корни биквадратного уравнения
+    biquadratic_roots = get_real_roots_from_quadratic_solutions(quadratic_roots)
+
+    return biquadratic_roots
+
+def format_roots(roots):
+    """Функция для форматирования вывода корней."""
+    if not roots:
+        return "Действительных корней нет."
+
+    # Убираем дубликаты корней и сортируем
+    unique_roots = sorted(set(roots))
+    roots_str = ", ".join([f"{root:.6f}".rstrip('0').rstrip('.') for root in unique_roots])
+    return f"Действительные корни: {roots_str}"
 
 def main():
-    a = get_coef(1, 'Введите коэффициент А:')
-    b = get_coef(2, 'Введите коэффициент B:')
-    c = get_coef(3, 'Введите коэффициент C:')
-    roots = get_roots(a, b, c)
-    len_roots = len(roots)
-    if len_roots == 0:
-        print('Действительных корней нет')
-    elif len_roots == 1:
-        print(f'Один корень: {roots[0]}')
-    elif len_roots == 2:
-        print('Два корня: {} и {}'.format(roots[0], roots[1]))
-    elif len_roots == 3:
-        print('Три корня: {} и {} и {}'.format(roots[0], roots[1], roots[2]))
-    else:
-        print('Четыре корня: {} и {} и {} и {}'.format(roots[0], roots[1], roots[2],
-                                                       roots[3]))
+    """Основная функция программы."""
+    # Пытаемся получить коэффициенты из командной строки
+    coefficients = parse_command_line_arguments()
 
+    if coefficients:
+        a, b, c = coefficients
+        print(f"Использованы коэффициенты из командной строки: A={a}, B={b}, C={c}")
+    else:
+        # Если не получилось, вводим с клавиатуры
+        a, b, c = get_coefficients_from_keyboard()
+
+    # Проверяем коэффициент A
+    if not validate_coefficient_a(a):
+        return
+
+    # Решаем биквадратное уравнение
+    roots = solve_biquadratic(a, b, c)
+
+    # Форматируем и выводим результат
+    result = format_roots(roots)
+    print(result)
 
 if __name__ == "__main__":
     main()
