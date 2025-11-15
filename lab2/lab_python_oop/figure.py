@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 
-class Figure(ABC):
+class GeometricFigure(ABC):
     @abstractmethod
-    def area(self):
+    def square(self):
         pass
 
     @classmethod
-    def get_figure_type(cls):
+    def get_name(cls):
         return cls.__name__

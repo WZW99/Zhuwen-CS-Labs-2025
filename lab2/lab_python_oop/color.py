@@ -1,6 +1,6 @@
 class FigureColor:
-    def __init__(self):
-        self._color = None
+    def __init__(self, color):
+        self._color = color
 
     @property
     def color(self):
