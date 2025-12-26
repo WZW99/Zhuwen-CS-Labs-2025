@@ -1,0 +1,20 @@
+[
+    {"job-name": "Frontend разработчик", "salary": 140000},
+    {"job-name": "Backend разработчик", "salary": 160000},
+    {"job-name": "Fullstack программист", "salary": 170000},
+    {"job-name": "Data Engineer", "salary": 155000},
+    {"job-name": "ML инженер", "salary": 180000},
+    {"job-name": "QA инженер", "salary": 120000},
+    {"job-name": "UX/UI дизайнер", "salary": 110000},
+    {"job-name": "Product менеджер", "salary": 130000},
+    {"job-name": "Системный администратор", "salary": 125000},
+    {"job-name": "Сетевой инженер", "salary": 135000},
+    {"job-name": "DevOps инженер", "salary": 165000},
+    {"job-name": "Android разработчик", "salary": 145000},
+    {"job-name": "iOS разработчик", "salary": 150000},
+    {"job-name": "Game Developer", "salary": 155000},
+    {"job-name": "Embedded программист", "salary": 140000},
+    {"job-name": "Биоинформатик", "salary": 175000},
+    {"job-name": "Frontend разработчик", "salary": 142000},
+    {"job-name": "Backend разработчик", "salary": 158000}
+]
